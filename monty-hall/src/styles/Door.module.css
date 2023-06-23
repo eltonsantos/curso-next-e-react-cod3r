@@ -32,7 +32,7 @@
   font-size: 3rem;
 }
 
-.handle {
+.knob {
   position: absolute;
   align-self: flex-start;
   top: calc(0.45 * var(--area-door-height));
@@ -58,6 +58,6 @@
   color: yellow;
 }
 
-.selected .handle {
+.selected .knob {
   background-color: yellow;
 }
