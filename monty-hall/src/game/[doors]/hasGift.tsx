@@ -15,10 +15,10 @@ export default function Game() {
     const doors = +router.query.doors;
     const hasGift = +router.query.hasGift;
 
-    const qtdePortasValida = doors >= 3 && doors <= 100;
+    const qtdDoorsValid = doors >= 3 && doors <= 100;
     const hasGiftValid = hasGift >= 1 && hasGift <= doors;
 
-    setValid(qtdePortasValida && hasGiftValid);
+    setValid(qtdDoorsValid && hasGiftValid);
   }, [doors, router.query.doors, router.query.hasGift]);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Game() {
       <div className={styles.doors}>
         {valid ? renderDoors() : <h1>Valores inválidos</h1>}
       </div>
-      <div className={styles.bottons}>
+      <div className={styles.buttons}>
         <Link href="/" passHref>
           <button>Reiniciar Jogo</button>
         </Link>

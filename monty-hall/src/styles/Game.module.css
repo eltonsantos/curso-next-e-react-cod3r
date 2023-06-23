@@ -13,13 +13,13 @@
   flex-wrap: wrap;
 }
 
-.bottons {
+.buttons {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
 
-.bottons button {
+.buttons button {
   background-color: #c0392c;
   color: #fff;
   font-size: 2rem;
