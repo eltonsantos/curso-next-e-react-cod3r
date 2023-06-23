@@ -1,7 +1,14 @@
+import DoorModel from "../model/door";
 import styles from "../styles/Door.module.css";
 import Gift from "./Gift";
 
-export default function Door() {
+interface DoorProps {
+  value: any;
+  onChange(arg0: any): unknown;
+  door: DoorModel
+}
+
+export default function Door(props: DoorProps) {
   const door = props.value;
   const selected = door.selected && !door.opened ? styles.selected : "";
 
