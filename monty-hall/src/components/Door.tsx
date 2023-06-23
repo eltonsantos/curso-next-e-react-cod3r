@@ -3,9 +3,8 @@ import styles from "../styles/Door.module.css";
 import Gift from "./Gift";
 
 interface DoorProps {
-  value: any;
-  onChange(arg0: any): unknown;
-  door: DoorModel
+  value: DoorModel
+  onChange: (newDoor: DoorModel) => void
 }
 
 export default function Door(props: DoorProps) {
@@ -30,7 +29,7 @@ export default function Door(props: DoorProps) {
   return (
     <div className={styles.area} onClick={changeSelection}>
       <div className={`${styles.structure} ${selected}`}>
-        {door.closed ? renderDoor() : door.haveGift ? <Gift /> : false}
+        {door.closed ? renderDoor() : door.hasGift ? <Gift /> : false}
       </div>
       <div className={styles.floor}></div>
     </div>
