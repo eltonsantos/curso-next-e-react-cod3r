@@ -18,6 +18,6 @@ a {
 }
 
 :root {
-  --area-porta-altura: 310px;
-  --area-porta-largura: 200px;
+  --area-door-height: 310px;
+  --area-door-width: 200px;
 }
