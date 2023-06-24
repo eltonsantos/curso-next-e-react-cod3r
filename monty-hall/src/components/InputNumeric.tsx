@@ -1,9 +1,9 @@
 import styles from "../styles/InputNumeric.module.css";
 
 interface InputNumericProps {
-  text: string;
-  value: number;
-  onChange: (newValue: number) => void;
+  text: string
+  value: number
+  onChange: (newValue: number) => void
 }
 
 export default function InputNumeric(props: InputNumericProps) {

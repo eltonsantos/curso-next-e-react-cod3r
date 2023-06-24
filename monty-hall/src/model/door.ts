@@ -1,14 +1,14 @@
 export default class DoorModel {
-  #number: number;
-  #hasGift: boolean;
-  #selected: boolean;
-  #open: boolean;
+  #number: number
+  #hasGift: boolean
+  #selected: boolean
+  #opened: boolean
 
-  constructor(number: number, hasGift = false, selected = false, open = false) {
+  constructor(number: number, hasGift = false, selected = false, opened = false) {
     this.#number = number;
     this.#hasGift = hasGift;
     this.#selected = selected;
-    this.#open = open;
+    this.#opened = opened;
   }
 
   get number() {
@@ -24,11 +24,11 @@ export default class DoorModel {
   }
 
   get opened() {
-    return this.#open;
+    return this.#opened;
   }
 
   get closed() {
-    return !this.open;
+    return !this.opened;
   }
 
   unSelect() {

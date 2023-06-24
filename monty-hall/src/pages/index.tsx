@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Card from "../components/Card";
-import InputNumeric from "../components/InputNumeric";
-import Link from "next/link";
 import styles from "../styles/Form.module.css";
+import Card from "../components/Card";
+import Link from "next/link";
+import InputNumeric from "../components/InputNumeric";
+import { useState } from "react";
 
 export default function Form() {
   const [qtdDoors, setQtdDoors] = useState(3);
@@ -33,7 +33,7 @@ export default function Form() {
           />
         </Card>
         <Card bgcolor="#28a085">
-          <Link href={`/game/${qtdDoors}/${withGift}`} passHref>
+          <Link className={styles.link} href={`/game/${qtdDoors}/${withGift}`} passHref>
             <h2 className={styles.link}>Iniciar</h2>
           </Link>
         </Card>

@@ -1,7 +1,7 @@
 import styles from "../../../styles/Game.module.css";
 import { useEffect, useState } from "react";
-import Door from "../../components/Door";
-import { updateDoors, createDoors } from "../../functions/doors";
+import Door from "../../../components/Door";
+import { updateDoors, createDoors } from "../../../functions/doors";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
