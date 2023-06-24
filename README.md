@@ -15,7 +15,7 @@ https://www.udemy.com/course/nextjs-e-react
 Acessar:
 [montyhall-eltonsantos.vercel.app](montyhall-eltonsantos.vercel.app)
 
-<hr />
+
 
 ## 👨🏻‍💻 Author
 
