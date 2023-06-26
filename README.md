@@ -21,7 +21,12 @@ Acessar:
 
 Projeto quiz.
 
+<p align="center">
+  <img alt="Quiz" src=".github/quiz.png" width="500px">
+</p>
+
 Acessar:
+[montyhall-eltonsantos.vercel.app](montyhall-eltonsantos.vercel.app)
 
 
 ## 👨🏻‍💻 Author
