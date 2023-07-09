@@ -1,5 +1,15 @@
 import questions from "../dbQuestions"
 
 export default (req: any, res: any) => {
-  res.status(200).json(questions[0].toObject())
+
+  const selectedId = +req.query.id
+
+  const uniqueQuestionOrNothing = questions.filter(question => question.id === selectedId)
+
+  if (uniqueQuestionOrNothing.length === 1) {
+      const selectedQuestion = uniqueQuestionOrNothing[0]
+      res.status(200).json(selectedQuestion.toObject())
+  } else {
+      res.status(204).send()
+  }
 }
