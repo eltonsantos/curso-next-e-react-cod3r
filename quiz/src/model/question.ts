@@ -32,8 +32,8 @@ export default class QuestionModel {
   }
 
   get answered() {
-    for(let answer of this.#answers) {
-      if(answer.revealed) return true
+    for (let answer of this.#answers) {
+      if (answer.revealed) return true
     }
     return false
   }
@@ -41,9 +41,9 @@ export default class QuestionModel {
   replyWith(index: number): QuestionModel {
     const got = this.#answers[index]?.right
     const answers = this.#answers.map((answer, i) => {
-        const selectedAnswer = index === i
-        const mustReveal = selectedAnswer || answer.right
-        return mustReveal ? answer.reveal() : answer
+      const selectedAnswer = index === i
+      const mustReveal = selectedAnswer || answer.right
+      return mustReveal ? answer.reveal() : answer
     })
     return new QuestionModel(this.id, this.title, answers, got)
   }
