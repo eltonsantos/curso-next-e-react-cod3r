@@ -12,4 +12,5 @@ export default (req: any, res: any) => {
   } else {
     res.status(204).send()
   }
+  
 }
