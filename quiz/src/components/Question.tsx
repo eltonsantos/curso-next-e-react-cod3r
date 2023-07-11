@@ -1,5 +1,6 @@
 import styles from "@/styles/Question.module.css"
 import QuestionModel from "@/model/question"
+import Title from "./Title"
 
 const letras = [
   { value: 'A', color: '#F2C866' },
@@ -15,7 +16,9 @@ interface QuestionProps {
 export default function Question(props: QuestionModel) {
   const question = props.value
   return (
-    <div>Teste</div>
+    <div className={styles.question}>
+      <Title text={question.title} /> 
+    </div>
   )
 
 }
