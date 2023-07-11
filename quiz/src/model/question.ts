@@ -6,6 +6,7 @@ export default class QuestionModel {
   #title: string
   #answers: AnswerModel[]
   #got: boolean
+  value: any
   // #answered: boolean
 
   constructor(id: number, title: string, answers: AnswerModel[], got = false) {
