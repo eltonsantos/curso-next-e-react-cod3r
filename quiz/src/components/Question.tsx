@@ -2,6 +2,7 @@ import styles from "@/styles/Question.module.css"
 import QuestionModel from "@/model/question"
 import Title from "./Title"
 import Answer from "./Answer"
+import Timer from "./Timer"
 
 const letters = [
   { value: 'A', color: '#F2C866' },
@@ -12,8 +13,8 @@ const letters = [
 
 interface QuestionProps {
   value: QuestionModel
-  tempoPraResposta?: number
-  answerProvided: (index: number) =>  void
+  timeToRepply?: number
+  answerProvided: (index: number) => void
   timeout: () => void
 }
 
@@ -37,7 +38,10 @@ export default function Question(props: QuestionProps) {
 
   return (
     <div className={styles.question}>
-      <Title text={question.title} /> 
+      <Title text={question.title} />
+      <Timer key={question.id}
+        duration={props.timeToRepply ?? 10}
+        timeout={props.timeout} />
       {renderAnswers()}
     </div>
   )
