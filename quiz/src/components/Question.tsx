@@ -14,7 +14,7 @@ const letters = [
 interface QuestionProps {
   value: QuestionModel
   timeToRepply?: number
-  answerProvided: (index: number) => void
+  onResponse: (index: number) => void
   timeout: () => void
 }
 
@@ -30,7 +30,7 @@ export default function Question(props: QuestionProps) {
           index={i}
           letter={letters[i].value}
           colorBgLetter={letters[i].color}
-          answerProvided={props.answerProvided}
+          onResponse={props.onResponse}
         />
       )
     })
