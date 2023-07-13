@@ -3,7 +3,7 @@ import QuestionModel from "@/model/question"
 import Title from "./Title"
 import Answer from "./Answer"
 
-const letras = [
+const letters = [
   { value: 'A', color: '#F2C866' },
   { value: 'B', color: '#F266BA' },
   { value: 'C', color: '#85D4F2' },
@@ -12,14 +12,26 @@ const letras = [
 
 interface QuestionProps {
   value: QuestionModel
+  tempoPraResposta?: number
+  answerProvided: (index: number) =>  void
+  timeout: () => void
 }
 
-export default function Question(props: QuestionModel) {
+export default function Question(props: QuestionProps) {
   const question = props.value
 
   function renderAnswers() {
     return question.answers.map((answer, i) => {
-      return <Answer value={answer} index={i} letter='A' colorLetter='#f2c866' />
+      return (
+        <Answer
+          key={`${question.id}-${i}`}
+          value={answer}
+          index={i}
+          letter={letters[i].value}
+          colorBgLetter={letters[i].color}
+          answerProvided={props.answerProvided}
+        />
+      )
     })
   }
 

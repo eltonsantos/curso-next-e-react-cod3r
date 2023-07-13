@@ -6,10 +6,12 @@ interface AnswerProps {
   index: number
   letter: string
   colorBgLetter: string
+  answerProvided: (index: number) => void
 }
 
 export default function Answer(props: AnswerProps) {
-
+  const answer = props.value
+  const answerReveal = answer.revealed ? styles.answerReveal : ''
   return (
     <div className={styles.answer}>
       <div className={`${styles.contentAnswer}`}>
