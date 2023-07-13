@@ -63,13 +63,13 @@ export default class QuestionModel {
     return new QuestionModel(obj.id, obj.title, answers, obj.got)
   }
 
-  toObject() {
+  fromObject() {
     return {
       id: this.#id,
       title: this.#title,
       got: this.#got,
       answered: this.answered,
-      answers: this.#answers.map(answer => answer.toObject()),
+      answers: this.#answers.map(answer => answer.fromObject()),
     }
   }
 }

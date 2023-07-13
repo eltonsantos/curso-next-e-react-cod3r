@@ -8,7 +8,7 @@ export default (req: any, res: any) => {
 
   if (uniqueQuestionOrNothing.length === 1) {
     const selectedQuestion = uniqueQuestionOrNothing[0].shuffleAnswers()
-    res.status(200).json(selectedQuestion.toObject())
+    res.status(200).json(selectedQuestion.fromObject())
   } else {
     res.status(204).send()
   }

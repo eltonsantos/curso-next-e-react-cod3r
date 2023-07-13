@@ -37,7 +37,7 @@ export default class AnswerModel {
     return new AnswerModel(obj.value, obj.right, obj.revealed)
   }
 
-  toObject() {
+  fromObject() {
     return {
       value: this.#value,
       right: this.#right,
