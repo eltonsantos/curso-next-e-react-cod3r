@@ -39,8 +39,10 @@ export default function Home() {
   }
 
   function idNextQuestion() {
-    const nextIndex = questionsIds.indexOf(question?.id) + 1
-    return questionsIds[nextIndex]
+    if (question) {
+      const nextIndex = questionsIds.indexOf(question.id) + 1
+      return questionsIds[nextIndex]
+    }
   }
 
   function goToNextStep() {
@@ -62,19 +64,12 @@ export default function Home() {
     })
   }
 
-  return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh'
-    }}>
-      <Questionary
-        question={question}
-        last={idNextQuestion() === undefined}
-        questionAnswered={questionAnswered}
-        goToNextStep={goToNextStep}
-      />
-    </div>
-  )
+  return question ? (
+    <Questionary
+      question={question}
+      last={idNextQuestion() === undefined}
+      questionAnswered={questionAnswered}
+      goToNextStep={goToNextStep}
+    />
+  ) : false
 }

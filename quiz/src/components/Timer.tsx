@@ -16,10 +16,12 @@ export default function Timer(props: TimerProps) {
         size={120}
         isPlaying
         onComplete={props.timeout}
-        colors={['#BCE596', '#F7B801', '#ED827A']}
-        colorsTime={[0.33, 0.33, 0.33]}
-      >
-        {({ remainingTime }) => remainingTime}
+        colors={[
+          ['#BCE596', 0.33],
+          ['#F7B801', 0.33],
+          ['#ED827A', 0.33],
+        ]}
+      >{({ remainingTime }) => remainingTime}
       </CountdownCircleTimer>
     </div>
   )
