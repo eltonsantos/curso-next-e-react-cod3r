@@ -15,7 +15,7 @@
   transform-style: preserve-3d;
 }
 
-.repplyReveal.contentAnswer {
+.replyReveal.contentAnswer {
   transform: rotateY(180deg);
 }
 
