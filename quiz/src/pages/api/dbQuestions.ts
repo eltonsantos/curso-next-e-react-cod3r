@@ -12,7 +12,7 @@ const questions: QuestionModel[] = [
     // new AnswerModel('Barbeiro', true),
     // new AnswerModel('Pulga', false),
   ]),
-  new QuestionModel(302, "Qual fruto é conhecido commo jerimum?", [
+  new QuestionModel(302, "Qual fruto é conhecido como jerimum?", [
     AnswerModel.wrong("Caju"),
     AnswerModel.wrong("Chuchu"),
     AnswerModel.wrong("Beterraba"),
