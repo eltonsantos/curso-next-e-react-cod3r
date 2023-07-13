@@ -39,10 +39,8 @@ export default function Home() {
   }
 
   function idNextQuestion() {
-    if (question) {
-      const nextIndex = questionsIds.indexOf(question.id) + 1
-      return questionsIds[nextIndex]
-    }
+    const nextIndex = questionsIds.indexOf(question.id) + 1
+    return questionsIds[nextIndex]
   }
 
   function goToNextStep() {

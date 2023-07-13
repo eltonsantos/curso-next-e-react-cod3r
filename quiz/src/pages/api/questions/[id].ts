@@ -3,7 +3,6 @@ import questions from "../dbQuestions"
 export default (req: any, res: any) => {
 
   const selectedId = +req.query.id
-
   const uniqueQuestionOrNothing = questions.filter(question => question.id === selectedId)
 
   if (uniqueQuestionOrNothing.length === 1) {
