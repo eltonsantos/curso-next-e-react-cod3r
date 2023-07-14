@@ -15,10 +15,8 @@ export default function Result() {
       <h1>Resultado Final</h1>
       <div style={{ display: "flex" }}>
         <Statistic text="Perguntas" value={total} />
-        <Statistic text="Certas" value={right}
-          bgColor="#9CD2A4" />
-        <Statistic text="Percentual" value={`${percentual}%`}
-          bgColor="#DE6A33" />
+        <Statistic text="Certas" value={right} bgColor="#9CD2A4" />
+        <Statistic text="Percentual" value={`${percentual}%`} bgColor="#DE6A33" />
       </div>
       <Button href="/" text="Tentar Novamente" />
     </div>
