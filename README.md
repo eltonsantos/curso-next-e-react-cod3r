@@ -26,7 +26,7 @@ Projeto quiz.
 </p>
 
 Acessar:
-[montyhall-eltonsantos.vercel.app](montyhall-eltonsantos.vercel.app)
+[quiz-eltonsantos.vercel.app](quiz-eltonsantos.vercel.app)
 
 
 ## 👨🏻‍💻 Author
