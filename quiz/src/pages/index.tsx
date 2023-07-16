@@ -7,7 +7,7 @@ import config from '../../config';
 
 // const BASE_URL = "http://localhost:3000/api";
 // const BASE_URL = "https://quiz-eltonsantos.vercel.app/api";
-const BASE_URL = config.BASE_URL;
+const BASE_URL = config.NEXT_PUBLIC_BASE_URL;
 
 export default function Home() {
   const router = useRouter()
