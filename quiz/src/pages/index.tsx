@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 // const BASE_URL = "http://localhost:3000/api";
-const BASE_URL = "https://quiz-eltonsantos.vercel.app/api";
-// const BASE_URL = process.env.BASE_URL;
+// const BASE_URL = "https://quiz-eltonsantos.vercel.app/api";
+const BASE_URL = process.env.BASE_URL;
 
 export default function Home() {
   const router = useRouter()
