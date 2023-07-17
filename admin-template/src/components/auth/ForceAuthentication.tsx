@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import router from 'next/router'
-import loading from '../../../public/images/loading.gif'
+import loadingImage from '../../../public/images/loading.gif'
 import useAuth from '../../data/hooks/useAuth'
 
 export default function ForceAuthentication(props) {
@@ -32,7 +32,7 @@ export default function ForceAuthentication(props) {
       <div className={`
                 flex justify-center items-center h-screen
             `}>
-        <Image src={loading} alt="User Avatar" />
+        <Image src={loadingImage} alt="User Avatar" />
       </div>
     )
   }
