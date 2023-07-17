@@ -108,8 +108,8 @@ export function AuthProvider(props) {
 
   useEffect(() => {
     if (Cookies.get('admin-template-cod3r-auth')) {
-      const cancelar = firebase.auth().onIdTokenChanged(configuringSession)
-      return () => cancelar()
+      const cancel = firebase.auth().onIdTokenChanged(configuringSession)
+      return () => cancel()
     } else {
       setLoading(false)
     }
