@@ -59,9 +59,7 @@ export function AuthProvider(props) {
   async function login(email, password) {
     try {
       setLoading(true)
-      const resp = await firebase.auth()
-        .signInWithEmailAndPassword(email, password)
-
+      const resp = await firebase.auth().signInWithEmailAndPassword(email, password)
       await configuringSession(resp.user)
       route.push('/')
     } finally {
@@ -72,9 +70,7 @@ export function AuthProvider(props) {
   async function signUp(email, password) {
     try {
       setLoading(true)
-      const resp = await firebase.auth()
-        .createUserWithEmailAndPassword(email, password)
-
+      const resp = await firebase.auth().createUserWithEmailAndPassword(email, password)
       await configuringSession(resp.user)
       route.push('/')
     } finally {
@@ -85,10 +81,7 @@ export function AuthProvider(props) {
   async function loginGoogle() {
     try {
       setLoading(true)
-      const resp = await firebase.auth().signInWithPopup(
-        new firebase.auth.GoogleAuthProvider()
-      )
-
+      const resp = await firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
       await configuringSession(resp.user)
       route.push('/')
     } finally {
