@@ -13,13 +13,13 @@ export function AppProvider(props) {
   const [theme, setTheme] = useState('dark')
 
   function changeTheme() {
-    const newTheme = theme === '' ? 'dark' : ''
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
     setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
+    localStorage.setItem('adminTemplate:theme', newTheme)
   }
 
   useEffect(() => {
-    const saveTheme = localStorage.getItem('theme')
+    const saveTheme = localStorage.getItem('adminTemplate:theme')
     setTheme(saveTheme)
   }, [])
 
