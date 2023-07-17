@@ -28,6 +28,18 @@ Projeto quiz.
 Acessar:
 [quiz-eltonsantos.vercel.app](quiz-eltonsantos.vercel.app)
 
+### Admin Template
+
+Projeto admin template
+
+<p align="center">
+  <img alt="Quiz" src=".github/admintemplate.png" width="500px">
+</p>
+
+Acessar:
+[admin-template-eltonsantos.vercel.app](admin-template-eltonsantos.vercel.app)
+
+
 
 ## 👨🏻‍💻 Author
 
