@@ -12,7 +12,7 @@ export default function Authentication() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  function showError(msg, timeInSeconds = 5) {
+  function showError(msg: any, timeInSeconds = 5) {
     setError(msg)
     setTimeout(() => setError(null), timeInSeconds * 1000)
   }
